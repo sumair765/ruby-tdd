@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 require_relative './spec_helper'
 require_relative '../lib/solver'
-
 
 describe Solver do
   context 'Test Fizzbuzz algorithm' do
@@ -17,10 +18,10 @@ describe Solver do
     end
 
     it 'the method returns fizz if the number is divisble 3' do
-        test2 = Solver.new
-        expect(test2.fizzbuz(3)).to eq('fizz')
-        expect(test2.fizzbuz(18)).to eq('fizz')
-      end
+      test2 = Solver.new
+      expect(test2.fizzbuz(3)).to eq('fizz')
+      expect(test2.fizzbuz(18)).to eq('fizz')
+    end
 
     it 'The method returns the number if not divisvle by 3 or 5' do
       test4 = Solver.new
@@ -41,25 +42,25 @@ describe Solver do
 end
 
 describe Solver do
-    context 'Factorial tests' do
-      it 'the factorial method is called recursively' do
-        test6 = Solver.new
-        expect(test6).to receive(:factorial).with(3).ordered.and_call_original
-        expect(test6).to receive(:factorial).with(2).ordered.and_call_original
-        expect(test6).to receive(:factorial).with(1).ordered.and_call_original
-        test6.factorial(3)
-      end
-  
-      it 'The method take an integer as a parameter and return its factorial:' do
-        test7 = Solver.new
-        expect(test7.factorial(3)).to eq(6)
-        expect(test7.factorial(6)).to eq(720)
-      end
-  
-      it 'The method raise an exception if the argument is a negative number:' do
-        test8 = Solver.new
-        expect { test8.factorial(-100) }.to raise_exception(Exception)
-        expect { test8.factorial(-17) }.to raise_exception(Exception)
-      end
+  context 'Factorial tests' do
+    it 'the factorial method is called recursively' do
+      test6 = Solver.new
+      expect(test6).to receive(:factorial).with(3).ordered.and_call_original
+      expect(test6).to receive(:factorial).with(2).ordered.and_call_original
+      expect(test6).to receive(:factorial).with(1).ordered.and_call_original
+      test6.factorial(3)
+    end
+
+    it 'The method take an integer as a parameter and return its factorial:' do
+      test7 = Solver.new
+      expect(test7.factorial(3)).to eq(6)
+      expect(test7.factorial(6)).to eq(720)
+    end
+
+    it 'The method raise an exception if the argument is a negative number:' do
+      test8 = Solver.new
+      expect { test8.factorial(-100) }.to raise_exception(Exception)
+      expect { test8.factorial(-17) }.to raise_exception(Exception)
     end
   end
+end
