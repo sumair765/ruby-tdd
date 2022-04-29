@@ -1,5 +1,5 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-# ruby-test drivent development Project
+# ruby-test driven development Project
 > This is a ruby project built with object oriented programming principals with Rspec testing in Ruby.
 
 
@@ -32,9 +32,7 @@ run "bundle install" to install dependencies
 ### Run the tests 
 
 - install spec gem by typing : `gem install rspec`
-- Go to the `spec` directory by typing  `cd spec`
-- run all the test by `rspec spec .`
-- run a test `rspec spec [filename]`, example ro run the `classroom_spec.rb` type `rspec spec classroom_spec.rb`
+- run all the test by `rspec`
 
 ## Authors
 
